@@ -1,0 +1,31 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=5078
+
+This permut.vim plugin allows to swap two columns of text in a selected range of lines.  The columns can be separated by any character (not present in text). By default, the column_separator is '|' character. The user can enter any kind of separator character. The more usual separator character encountered are the ',' or ';' or ':' characters.
+
+Here is the syntax of the Permut command:
+
+    :[range] Permut <colnum1> <colnum2> [column_separator]
+
+Example 1 with default column separator:
+
+    1  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    2  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    3  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    4  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    5  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    6  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+    7  ab cd | ef gh | ijk lmn | opq rst | uv wx | yz
+
+    :1,7 Permut 1 3
+
+    1  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    2  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    3  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    4  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    5  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    6  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+    7  ijk lmn | ef gh | ab cd | opq rst | uv wx | yz
+
+For more detailed documentation, see the README on GitHub:
+https://github.com/jlemetay/permut
+
